@@ -1,4 +1,4 @@
-const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxFKEyS6Z0SKvvv1vzcPwMzFbJdi6OinEK_XyKqRYehP1UqdcFL-2pyTOR89-9J8F0S/exec';
+const GOOGLE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1pPtipvZnUmb8UNs970AkTrKGnreQ_jW50HAqqS7mb0Q';
 
 let allItems = [];
 
