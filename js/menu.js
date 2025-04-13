@@ -2,12 +2,14 @@ const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxFKEyS6Z0SKvv
 
 let allItems = [];
 
-// Show Toast Message
+// Toast Message
 function showToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;
   toast.className = "toast show";
-  setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 2500);
+  setTimeout(() => {
+    toast.className = toast.className.replace("show", "");
+  }, 2500);
 }
 
 // Add to Cart
@@ -26,13 +28,13 @@ function addToCart(itemName, weight, price, imageUrl) {
   showToast(`${itemName} (${weight}) added to cart!`);
 }
 
-// Load and display items by category
+// Load Menu
 function loadMenu(category) {
   const menuItemsDiv = document.getElementById('menu-items');
   menuItemsDiv.innerHTML = '';
 
   const items = allItems.filter(item =>
-    item["Category "]?.trim().toLowerCase() === category.toLowerCase()
+    item["Category"]?.trim().toLowerCase() === category.toLowerCase()
   );
 
   if (items.length === 0) {
@@ -47,7 +49,7 @@ function loadMenu(category) {
       "1000G": item["Price 1000G"]
     };
 
-    let weightOptions = Object.keys(weights).map(w =>
+    const weightOptions = Object.keys(weights).map(w =>
       `<option value="${w}">${w}</option>`
     ).join('');
 
@@ -67,7 +69,7 @@ function loadMenu(category) {
   });
 }
 
-// Update price on weight change
+// Update price on dropdown change
 function updatePrice(selectElem, index, weights) {
   const selectedWeight = selectElem.value;
   document.getElementById(`price-${index}`).innerText = weights[selectedWeight] || '';
@@ -80,20 +82,19 @@ function updateCartCount() {
   document.getElementById('cart-count').innerText = count;
 }
 
-// Fetch menu data on load
+// Fetch data from Google Apps Script on page load
 window.onload = async function () {
   try {
     const res = await fetch(GOOGLE_SHEET_URL);
     const text = await res.text();
 
-    // If using HtmlService, the response is HTML with embedded JSON
-    const jsonStr = text.trim().startsWith('{') ? text : text.match(/{.*}/s)?.[0]; // extract JSON
+    const jsonStr = text.trim().startsWith('{') ? text : text.match(/{.*}/s)?.[0];
     allItems = JSON.parse(jsonStr);
 
     updateCartCount();
-    loadMenu('Snacks'); // default category
+    loadMenu('Snacks');
   } catch (err) {
-    document.getElementById('menu-items').innerHTML = '<p>Failed to load menu: ' + err.message + '</p>';
+    document.getElementById('menu-items').innerHTML = `<p>Failed to load menu: ${err.message}</p>`;
     console.error('Failed to fetch menu items:', err);
   }
-}
+};
