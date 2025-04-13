@@ -84,7 +84,12 @@ function updateCartCount() {
 window.onload = async function () {
   try {
     const res = await fetch(GOOGLE_SHEET_URL);
-    allItems = await res.json();
+    const text = await res.text();
+
+    // If using HtmlService, the response is HTML with embedded JSON
+    const jsonStr = text.trim().startsWith('{') ? text : text.match(/{.*}/s)?.[0]; // extract JSON
+    allItems = JSON.parse(jsonStr);
+
     updateCartCount();
     loadMenu('Snacks'); // default category
   } catch (err) {
