@@ -73,7 +73,6 @@ function handleCheckout(e) {
     fetch('https://script.google.com/macros/s/AKfycbxFKEyS6Z0SKvvv1vzcPwMzFbJdi6OinEK_XyKqRYehP1UqdcFL-2pyTOR89-9J8F0S/exec', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      mode: 'no-cors',
       body: JSON.stringify(payload)
     })
     .then(() => {
