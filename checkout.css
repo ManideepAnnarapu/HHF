@@ -1,0 +1,65 @@
+.checkout-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+  }
+  
+  .checkout-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .checkout-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .checkout-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .checkout-form input,
+  .checkout-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .checkout-form button {
+    padding: 10px 15px;
+    background-color: #f7c04a;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .checkout-form button:hover {
+    background-color: #e6a800;
+  }
+  
+  .cancel-btn {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #ccc;
+  }
+  

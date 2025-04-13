@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart - Honey Home Foods</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="cart.css">
+
+  <!-- Scripts -->
+  <script src="js/cart.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <img src="images/logo.png" alt="Logo" class="logo" onclick="window.location.href='home.html'">
+    <div class="site-title">Honey Home Foods</div>
+    <img src="images/cart.png" alt="Cart" class="cart-icon" onclick="window.location.href='cart.html'">
+  </header>
+
+  <!-- Cart Container -->
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+
+    <!-- Cart Items -->
+    <div class="cart-items" id="cart-items">
+      <!-- Dynamically rendered via JS -->
+    </div>
+
+    <!-- Total Section -->
+    <div class="total-section">
+      <p><strong>Total:</strong> <span id="total-price">0RM</span></p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="cart-buttons">
+      <button onclick="window.location.href='menu.html'">Continue Shopping</button>
+      <button onclick="openCheckout()">Check Out</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal Overlay (populated via checkout.js) -->
+  <div id="checkout-modal"></div>
+</body>
+</html>

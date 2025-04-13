@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader-container {
+    text-align: center;
+}
+
+.loader-container img {
+    width: 100px;
+}
+
+.loader-container p {
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+@media (max-width: 768px) {
+    .loader-container img {
+        width: 60px;
+    }
+
+    .loader-container p {
+        font-size: 14px;
+    }
+}

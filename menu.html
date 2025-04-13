@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu - Honey Home Foods</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <img src="images/logo.png" alt="Logo" class="logo" onclick="window.location.href='home.html'">
+        <div class="site-title">Honey Home Foods</div>
+        
+        <div class="cart-wrapper">
+            <img src="images/cart.png" alt="Cart" class="cart-icon" onclick="window.location.href='cart.html'">
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+    
+
+    <!-- Menu Section -->
+    <div class="menu-container">
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <img src="images/biryani.png" onclick="loadMenu('biryani')" alt="Biryani">
+            <img src="images/cakes.png" onclick="loadMenu('cakes')" alt="Cakes & Cookies">
+            <img src="images/snacks.png" onclick="loadMenu('snacks')" alt="Snacks">
+            <img src="images/pickles.png" onclick="loadMenu('pickles')" alt="Pickles">
+            <img src="images/other.png" onclick="loadMenu('others')" alt="Other Foods">
+        </nav>
+
+        <!-- Menu Items -->
+        <div class="menu-items" id="menu-items">
+            <!-- Dynamically loaded -->
+        </div>
+
+    </div>
+
+    <!-- Toast Div -->
+    <div id="toast" class="toast"></div>
+
+    <!-- JS LAST -->
+    <script src="js/menu.js" defer></script>
+
+</body>
+</html>

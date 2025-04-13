@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cart-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.background-image {
+    background: url('images/home-background.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image h1 {
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Brush Script MT', cursive;
+    text-shadow: 4px 4px 8px #000;
+    animation: rollText 4s infinite alternate;
+}
+
+/* Animation */
+@keyframes rollText {
+    0% {
+        transform: rotate(0deg) scale(1);
+        color: #da1313;
+    }
+    50% {
+        transform: rotate(5deg) scale(1.1);
+        color: #ffd700;
+    }
+    100% {
+        transform: rotate(-5deg) scale(1);
+        color: #ff0101;
+    }
+}
+
+.background-image button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 20px;
+    background-color: #f7c04a;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.background-image button:hover {
+    background-color: #e8a600;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .cart-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .background-image h1 {
+        font-size: 30px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .background-image button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}

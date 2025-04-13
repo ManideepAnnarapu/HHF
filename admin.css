@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    padding: 30px;
+  }
+  
+  .admin-container {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  }
+  
+  .admin-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  .weights input {
+    width: 32%;
+    display: inline-block;
+    margin-right: 1%;
+  }
+  
+  #itemImage {
+    margin-top: 5px;
+  }
+  
+  #imagePreview {
+    margin-top: 10px;
+    width: 100px;
+    border-radius: 6px;
+    display: block;
+  }
+  
+  button[type="submit"] {
+    background: #f7c04a;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background: #e5a600;
+  }
+  
+  #status {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+  }
+  
