@@ -70,7 +70,7 @@ function handleCheckout(e) {
 
     console.log(`📦 Sending item ${index + 1}:`, payload);
 
-    fetch('https://script.google.com/macros/s/AKfycbxFKEyS6Z0SKvvv1vzcPwMzFbJdi6OinEK_XyKqRYehP1UqdcFL-2pyTOR89-9J8F0S/exec', {
+    fetch('https://script.google.com/macros/s/AKfycby0xoZKgx7-mHtpYnLE-eNN4ZfohZg6MemQk8sImjpM-tca8UrJgS69g-RobYMAACt0/exec', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
